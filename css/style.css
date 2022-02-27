@@ -1,0 +1,95 @@
+*{
+    margin:0; 
+    padding:0;
+    font-size: 16px;
+    font-family:Consolas;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center ;
+    align-items:center;
+    min-height:100vh ;
+    background-color: #001925;
+}
+.container{
+    max-width:90%;
+}
+.list{
+    padding: 30px ;
+    position:relative;
+    background: #042b3e;
+    border-top:50px solid #0091d3;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+}
+.list:hover{
+    box-shadow: 0px 0px 20px 0px #0bb3ffa1;
+}
+.list h2{
+    color:#fff; 
+    font-size:30px ; 
+    padding : 10px 0 ;
+    margin-left : 10px ;
+    display:inline-block;
+    border-bottom: 4px solid #fff;
+}
+.list label{
+    margin: 40px 0;
+    position: relative;
+    color: white;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.list label [type="checkbox"]{
+    z-index:-2;
+}
+.list label i{
+    font-size:22px;
+}
+.list label span{
+    font-size: 24px;
+    position: relative; 
+    margin-left:5px;
+}
+.list label span::after{
+    content: "";
+    position: absolute;
+    display: none;
+    right: 0px;
+    width: 100%;
+    background-color:  #03a9f4;
+    height: 2px;
+    top: 50%; 
+} 
+.list label [type="checkbox"]:checked  ~ span::after {
+    display: block;
+}
+.list label [type="checkbox"]:checked ~ i{
+    color:#03a9f4;
+    opacity:.5;
+}
+.list label [type="checkbox"]:checked ~ span{
+    color:#03a9f4;
+    opacity:.5;
+}
+
+@media(max-width:768px){
+    .list label span {
+        font-size: 18px;
+    }
+}
+@media(max-width:450px){
+    .list label span {
+        font-size: 14px;
+    }
+    .list h2{
+        font-size: 24px;
+    }
+}
+
